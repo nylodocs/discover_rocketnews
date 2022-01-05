@@ -1,0 +1,167 @@
+/* --------------------- RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+}
+/* --------------------- VARIABLES */
+:root {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  /* FONTS */
+  --title-font: 700 2.4rem 'Work Sans', sans-serif;
+  --placeholder-font: 400 1.2rem 'Work Sans', sans-serif;
+  --text-bold-font: 700 1.4rem 'Spartan', sans-serif;
+  --text-font: 400 1.4rem 'Spartan', sans-serif;
+  /* COLORS */
+  --green: hsla(148, 92%, 39%, 1);
+  --light-green: hsl(147, 96.3%, 42.2%);
+  --purple: hsl(258.2, 73.2%, 62%);
+  --light-purple: hsla(258.2, 73.2%, 62%, 0.3);
+  --grey: hsl(0, 0%, 41.6%);
+  --light-grey: hsl(0, 0%, 65.9%);
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  /* width: 100vw;*/
+  height: 100vh;
+  background-color: black;
+}
+main {
+  display: flex;
+  /* width: 100vw;*/
+  height: 100vh;
+}
+.container {
+  background-color: black;
+  padding: 5rem 3rem;
+  width: 50%;
+  height: 100vh;
+  z-index: 1;
+}
+.bodyText {
+  margin: 9.2rem 0.6rem 5rem 0.6rem;
+}
+/* --------------------- TEXT */
+.title {
+  font: var(--title-font);
+  color: var(--green);
+  line-height: 2.815rem;
+}
+.textBold {
+  font: var(--text-bold-font);
+  color: white;
+  line-height: 1.568rem;
+  margin: 0.9rem 0;
+}
+.text {
+  font: var(--text-font);
+  color: white;
+  line-height: 1.942rem;
+}
+.formLabel {
+  font: var(--text-bold-font);
+  color: var(--light-grey);
+  line-height: 1.942rem;
+}
+::placeholder {
+  font: var(--placeholder-font);
+  color: var(--grey);
+  line-height: 1.408rem;
+}
+.textLink {
+  font: var(--text-bold-font);
+  color: var(--purple);
+  line-height: 1.942rem;
+}
+/* --------------------- FORM AND BOTTOM LINK */
+/* FORM */
+.mailForm {
+  position: absolute;
+}
+.emailBlock {
+  display: flex;
+  align-items: center;
+  margin-top: 1.7rem;
+  margin-bottom: 5rem;
+  box-shadow: 0.5rem 1rem 5rem;
+}
+#email {
+  border-width: 0;
+  border-left: 0.5rem solid var(--light-green);
+  width: 55vw;
+  height: 4.8rem;
+  padding-left: 1rem;
+  font: var(--placeholder-font);
+  color: var(--grey);
+  line-height: 1.408rem;
+  outline: none;
+}
+.button {
+  background-color: var(--purple);
+  padding: 1.2rem;
+  height: 4.8rem;
+  cursor: pointer;
+  outline: none;
+}
+.icon-send {
+  color: white;
+  font-size: 2.3rem;
+}
+/* BOTTOM LINK */
+.bottomLink {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.icon-arrow-right {
+  color: var(--purple);
+  font-size: 2.4rem;
+}
+/* --------------------- HEADER */
+header img {
+  width: 38.9rem;
+}
+/* --------------------- SIDE IMAGE */
+.sideImage {
+  background-image: url(read_news.jpg);
+  background-size: cover;
+  background-position-x: 75%;
+  width: 50%;
+  height: 100vh;
+  z-index: 0;
+}
+/* --------------------- MODAL */
+.modal {
+  background-color: var(--light-purple);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+}
+.modalPopUp {
+  background-color: black;
+  padding: 10rem;
+  display: flex;
+}
+.modalText {
+  margin: auto 0;
+}
+#active {
+  visibility: visible;
+  opacity: 100;
+}
